@@ -1,0 +1,19 @@
+{
+  "name": "antima.strxfx.com",
+  "version": "0.0.1",
+  "description": "Antimartingale EA Docs",
+  "main": "index.js",
+  "authors": {
+    "name": "Strx",
+    "email": "fstraps@gmail.com"
+  },
+  "repository": "https://github.com/straps/antima.strxfx.com/antima.strxfx.com",
+  "scripts": {
+    "dev": "vuepress dev src",
+    "build": "vuepress build src"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "vuepress": "^1.5.3"
+  }
+}
