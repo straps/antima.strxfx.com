@@ -1,11 +1,11 @@
 ---
 home: true
 heroImage: /img/antima-logo-01.png
-actionText: Get Started →
-actionLink: /guide/
+actionText: Inizia da qui →
+actionLink: /it/guida/
 features:
-  - title: Control the Risk
-    details: Know the maximum risk in currency terms before you start trading
+  - title: Controllo del rischio
+    details: Sai quanto rischi in termini di valuta prima di iniziare a tradare
   - title: Simple to use
     details: You open the first trade, the EA does the rest, a good trade can become an exceptional one
   - title: Real results

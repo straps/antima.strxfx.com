@@ -1,70 +1,52 @@
-const { description } = require('../../package')
+// THIS IS FILE IS OPTIONAL, you can delete it if you don't want to use it
+
+// config.js is the entry file for your VuePress app configuration
+// It can also be written in yml or toml instead of js
+// See the documentation for more information on how to use it
+// https://v1.vuepress.vuejs.org/config/
 
 module.exports = {
-  /**
-   * Ref：https://v1.vuepress.vuejs.org/config/#title
-   */
-  title: 'Vuepress Docs Boilerplate',
-  /**
-   * Ref：https://v1.vuepress.vuejs.org/config/#description
-   */
-  description: description,
-
-  /**
-   * Extra tags to be injected to the page HTML `<head>`
-   *
-   * ref：https://v1.vuepress.vuejs.org/config/#head
-   */
-  head: [
-    ['meta', { name: 'theme-color', content: '#3eaf7c' }],
-    ['meta', { name: 'apple-mobile-web-app-capable', content: 'yes' }],
-    ['meta', { name: 'apple-mobile-web-app-status-bar-style', content: 'black' }]
-  ],
-
-  /**
-   * Theme configuration, here is the default theme configuration for VuePress.
-   *
-   * ref：https://v1.vuepress.vuejs.org/theme/default-theme-config.html
-   */
   themeConfig: {
-    repo: '',
-    editLinks: false,
-    docsDir: '',
-    editLinkText: '',
-    lastUpdated: false,
-    nav: [
-      {
-        text: 'Guide',
-        link: '/guide/',
+    smoothScroll: false,
+    locales: {
+      "/": {
+        nav: [
+          { text: "🏠 Home", link: "/" },
+          { text: "📖 Guide", link: "/guide/" },
+          { text: "Telegram", link: "https://t.me/antimartingale" }
+        ]
       },
-      {
-        text: 'Config',
-        link: '/config/'
-      },
-      {
-        text: 'VuePress',
-        link: 'https://v1.vuepress.vuejs.org'
-      }
-    ],
-    sidebar: {
-      '/guide/': [
-        {
-          title: 'Guide',
-          collapsable: false,
-          children: [
-            '',
-            'using-vue',
-          ]
+      "/it/": {
+        nav: [
+          { text: "🏠 Home", link: "/it/" },
+          { text: "📖 Guida", link: "/it/guida/" },
+          { text: "Telegram", link: "https://t.me/antimartingale" }
+        ],
+        sidebar: {
+          '/it/guida/': [{
+            title: 'Guida',
+            collapsable: false,
+            children: [
+              '',
+              'inst',
+              ]
+            }]
         }
-      ],
+      }
     }
   },
-
-  /**
-   * Apply plugins，ref：https://v1.vuepress.vuejs.org/zh/plugin/
-   */
-  plugins: [
-    '@vuepress/plugin-back-to-top',
-    '@vuepress/plugin-medium-zoom',
-  ]
+  locales: {
+    // The key is the path for the locale to be nested under.
+    // As a special case, the default locale can use '/' as its path.
+    "/": {
+      lang: "en-US", // this will be set as the lang attribute on <html>
+      title: "Antimartingale 🤖 Expert Advisor",
+      description: "Automated trading for MT4"
+    },
+    "/it/": {
+      lang: "it-IT",
+      title: "Antimartingala 🤖 Expert Advisor",
+      description: "Trading automatico per MT4"
+    }
+  }
 }
